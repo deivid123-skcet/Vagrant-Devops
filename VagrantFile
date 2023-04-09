@@ -11,7 +11,7 @@ config.vm.define "ansible" do |ansible|
     vb.memory = 512
     vb.cpus = 1
     vb.name = "ansible"
-    ansible.vm.network "public_network", ip: "192.168.0.15"
+    ansible.vm.network "public_network", ip: "$(Seu_Ip)"
     ansible.vm.synced_folder ".", "/vagrant"
     ansible.vm.provision "shell", inline: "bash /vagrant/script.sh"
   end
